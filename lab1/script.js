@@ -2,7 +2,7 @@ let url = `https://api.nytimes.com/svc/news/v3/content/nyt/all.json?limit=200&ap
 
 $(document).ready(function() {
     getArticles();
-    StartTransition()
+    StartTransition();
 });
 
 async function getArticles(){

@@ -1,0 +1,10 @@
+img{
+    object-fit: cover;
+  }
+
+.carousel{
+  position:relative;
+}
+
+a { color: inherit; 
+} 

@@ -11,7 +11,7 @@ async function getArticles(){
     let apiInfo = data.results;
 
     LoopArticles(apiInfo, "#News");
-    console.log(apiInfo[2].section);
+    //console.log(apiInfo[2].section);
 }
 
 var timer;
@@ -28,13 +28,13 @@ function PauseTransition() {
 }
 function LoopArticles(info, section){
     let random_number = Math.random() * 200;
-    console.log(random_number);
+    //console.log(random_number);
     let loop_article = Math.floor(random_number);
     var card = "";
     for(let cnt = 0; cnt < 5; loop_article++){
         var article = info[loop_article];
         if(article != null && article.multimedia != null && article.multimedia[0].url != null){
-            console.log(article.multimedia[0].url);
+            //console.log(article.multimedia[0].url);
             let im = article.multimedia[2].url;
             if(cnt == 0){
                 card += `<div class = "row">`;

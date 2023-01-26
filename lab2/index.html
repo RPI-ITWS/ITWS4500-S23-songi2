@@ -1,45 +1,32 @@
 <!DocTYPE HTML>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Local Weather</title>
-    <link rel="icon" type="image/png" href="sun.png"/>
+    <title>Find Out Current Weather</title>
   </head>
 
-  <body onload="getlocation()">
-    <div id="top">
-      <h1>Local Weather</h1><br>
-    </div>
+  <body onload="getLocation()">
 
     <section class="vh-75">
-      <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-md-10 col-lg-8 col-xl-6">
-
-            <div class="card bg-white text-white">
-              <div class="bg-image" style="border-radius: 40px;">
-                <img src="sky.jpg"
-                  class="card-img" alt="weather" />
-                <div class="mask" style="background-color: rgba(190, 216, 232, .5);"></div>
-              </div>
-              <div class="card-img-overlay text-dark p-5">
-                <h3 class="mb-0" id="loc"></h3>
-                <p class="display-2 my-3" id="temp"></p>
-                <h4 id="weather"></h4>
-                <p class="mb-2">Feels Like: <strong id="feels"></strong></p>
-                <p class="mb-2">Humidity: <strong id="hum"></strong></p>
-                <p class="mb-2">Pressure: <strong id="pre"></strong></p>
-                <p class="mb-2">Wind Speed: <strong id="speed"></strong></p>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <h1>Better Solutions For Your Business</h1>
+            <h2>We are team of talented designers making websites with Bootstrap</h2>
+            <div class="d-flex justify-content-center justify-content-lg-start">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
             </div>
-
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
           </div>
         </div>
       </div>

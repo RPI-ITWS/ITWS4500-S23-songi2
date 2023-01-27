@@ -26,7 +26,7 @@ function getLocation() {
       }
     };
 
-    xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?lat=42.73&lon=-73.68&APPID=269c0626376ca1c96a1e100335085499", true);
+    xhttp.open("GET", "https://api.openweathermap.org/data/2.5/weather?lat=42.73&lon=-73.68&APPID=d39206d578254def9b2b2af92b7bcdff", true);
 
     xhttp.send();
   }

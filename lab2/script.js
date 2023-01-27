@@ -41,7 +41,6 @@ function showLoc(pos) {
 
 let weather = {
   fetchWeather: function (lat, long){ //Fetch helps you to create a request as GET
-    document.getElementById("error").innerHTML = lat + " " + long;
       fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=d39206d578254def9b2b2af92b7bcdff"
       ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
       .then((data) => this.displayWeather(data));
@@ -52,7 +51,7 @@ let weather = {
       // const{icon, description} = data.weather[0]; //the data under weather
       // const{temp,humidity} = data.main;
       // const{speed} = data.wind;
-      // document.querySelector(".city").innerText = "Weather in " + name;
+      document.querySelector(".city").innerText = "Weather in " + name;
       // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
       // document.querySelector(".description").innerText = description;
       // document.querySelector(".temp").innerText = temp + "°C";

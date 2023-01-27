@@ -1,6 +1,13 @@
-#map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
+body{
+  flex-direction: column;
+  display:flex;    
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+html{
+  height: 100%;
+}

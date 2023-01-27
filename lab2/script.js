@@ -41,6 +41,7 @@ function showLoc(pos) {
 
 let weather = {
   fetchWeather: function (lat, long){ //Fetch helps you to create a request as GET
+    document.getElementById("error").innerHTML = lat + " " + long;
       fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=d39206d578254def9b2b2af92b7bcdff"
       ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
       .then((data) => this.displayWeather(data));

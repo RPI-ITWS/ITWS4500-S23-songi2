@@ -1,7 +1,6 @@
 function getLocation() {
 
   if (navigator.geolocation) {
-    console.log("Hi");
     navigator.geolocation.getCurrentPosition(showLoc, showError);
   }else{
   }
@@ -23,16 +22,20 @@ let weather = {
   displayWeather: function (data) {
       var name = data.name; //I am extracting data from the json file now
       let icon = data.weather[0].icon;
-      console.log(icon);
-      icon.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+      var temp = ((data.main.temp - 273.15) * 1.8 + 32).toPrecision(3);
+      var description = data.weather[0].main;
+      console.log("hi");
+      // console.log(data.weather[0].main);
+      document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
       // const {icon} = data.cion
       // const{icon, description} = data.weather[0]; //the data under weather
       // const{temp,humidity} = data.main;
       // const{speed} = data.wind;
+      document.querySelector(".description").innerHTML = description;
       document.querySelector(".city").innerHTML = "Weather in " + name;
       // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
       // document.querySelector(".description").innerText = description;
-      // document.querySelector(".temp").innerText = temp + "°C";
+      document.querySelector(".temp").innerText = temp + "°F";
       // document.querySelector(".humidity").innerText ="Humidity: " + humidity + "%";
       // document.querySelector(".wind").innerText ="Wind speed: " + speed + " km/h";
   },

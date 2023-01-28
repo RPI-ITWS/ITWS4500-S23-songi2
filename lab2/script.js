@@ -7,10 +7,16 @@ function getLocation() {
 }
     
 function showLoc(pos) {
-
+  console.log("DD");
   var lat = pos.coords.latitude;
   var long = pos.coords.longitude;
+  displayMap(lat, long);
+  console.log("DLKSJ");
   weather.fetchWeather(lat, long);
+}
+
+function convertFahrenheit(input) {
+  return ((input - 273.15) * 1.8 + 32).toPrecision(3);
 }
 
 let weather = {
@@ -22,24 +28,40 @@ let weather = {
   displayWeather: function (data) {
       var name = data.name; //I am extracting data from the json file now
       let icon = data.weather[0].icon;
-      var temp = ((data.main.temp - 273.15) * 1.8 + 32).toPrecision(3);
-      var description = data.weather[0].main;
-      console.log("hi");
-      // console.log(data.weather[0].main);
+      var temp = convertFahrenheit(data.main.temp);
+      var description = data.weather[0].description;
+      var humidity = data.main.humidity;
+      var wind = (data.wind.speed);
+      var pressure = data.main.pressure;
+      var feels = convertFahrenheit(data.main.feels_like);
+      var high = convertFahrenheit(data.main.temp_max);
+      var low = convertFahrenheit(data.main.temp_min);
       document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
-      // const {icon} = data.cion
-      // const{icon, description} = data.weather[0]; //the data under weather
-      // const{temp,humidity} = data.main;
-      // const{speed} = data.wind;
+      document.querySelector(".humidity").innerHTML = "Humidity: " + `<i class="bi bi-droplet-half"></i> ` + humidity + "%";
       document.querySelector(".description").innerHTML = description;
       document.querySelector(".city").innerHTML = "Weather in " + name;
-      // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + ".png";
-      // document.querySelector(".description").innerText = description;
+      document.querySelector(".wind").innerHTML = "Wind Speed: " + `<i class="bi bi-wind"></i> ` + wind + "mph";
+      document.querySelector(".pressure").innerHTML = "Pressure: " + `<i class="bi bi-cloud-download"></i> ` + pressure + "hPa";
+      document.querySelector(".feels").innerHTML = "Feels Like: " + `<i class="bi bi-thermometer-half"></i> ` + feels + "°F";
+      document.querySelector(".high").innerHTML = "High Temp: " + `<i class="bi bi-thermometer-high"></i>` + high + "°F";
+      document.querySelector(".low").innerHTML = "Low Temp: " + `<i class="bi bi-thermometer-low"></i> ` + low + "°F";
       document.querySelector(".temp").innerText = temp + "°F";
-      // document.querySelector(".humidity").innerText ="Humidity: " + humidity + "%";
-      // document.querySelector(".wind").innerText ="Wind speed: " + speed + " km/h";
   },
 };
+
+function displayMap(lat, long){
+  var msg = "You are Here!"
+  map.panTo(new L.LatLng(lat, long));
+  L.marker([lat, long]).addTo(map).bindPopup(msg).openPopup();
+  L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+
+
+}
 
 
 function showError(error) {

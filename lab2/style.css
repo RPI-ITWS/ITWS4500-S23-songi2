@@ -11,3 +11,9 @@ section {
 html{
   height: 100%;
 }
+
+#map {
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 1rem;
+}

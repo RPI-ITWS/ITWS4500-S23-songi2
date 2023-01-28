@@ -49,12 +49,12 @@ let weather = {
 };
 
 function displayMap(lat, long){
-  let map = L.map("map").setView([0, 0], 9);
+  let map = L.map("map").setView([0, 0], 15);
   var msg = "Current Place"
   map.panTo(new L.LatLng(lat, long));
   L.marker([lat, long]).addTo(map).bindPopup(msg).openPopup();
   L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-    maxZoom: 15,
+    maxZoom: 19,
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);

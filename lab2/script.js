@@ -4,15 +4,9 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(displayLoc, displayError);
   }else{
-    displayDefault();
   }
 }
-function displayDefault(){
-  var lat = 	42.728104;
-  var long = 	-73.687576;
-  displayMap(lat,long);
-  weather.fetchWeather(lat, long);
-}    
+
 function displayLoc(pos) {
   var lat = pos.coords.latitude;
   var long = pos.coords.longitude;
@@ -74,6 +68,10 @@ function displayError(error) {
 
   switch(error.code) {
     case error.PERMISSION_DENIED:
+      var lat = 	42.728104;
+      var long = 	-73.687576;
+      displayMap(lat,long);
+      weather.fetchWeather(lat, long);
       document.getElementById("error").innerHTML = "User denied the request for Geolocation. Using default location."
       break;
     case error.POSITION_UNAVAILABLE:

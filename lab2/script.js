@@ -24,6 +24,16 @@ let weather = {
       ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
       .then((data) => this.displayWeather(data));
   },
+  fetchWeatherCity: function (city){ //Fetch helps you to create a request as GET
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=metric&APPID=d39206d578254def9b2b2af92b7bcdff"
+    ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
+    .then((data) => this.displayWeatherCity(data));
+  },
+  displayWeatherCity:function(data){
+    var city_lat = data.coord.lat;
+    var cit_long = data.coord.lon;
+    this.fetchWeather(lat,long);
+  },
   displayWeather: function (data) {
       var name = data.name; //I am extracting data from the json file now
       let icon = data.weather[0].icon;
@@ -46,6 +56,9 @@ let weather = {
       document.querySelector(".low").innerHTML = "Low Temp: " + `<i class="bi bi-thermometer-low"></i> ` + low + "°F";
       document.querySelector(".temp").innerText = temp + "°F";
   },
+  search:function (){
+    this.fetchWeatherCity(document.querySelector(".search-bar").value);
+  }
 };
 
 function displayMap(lat, long){
@@ -85,3 +98,13 @@ function displayError(error) {
       break;
   }
 }
+
+document.querySelector(".search button").addEventListener("click", function () {
+  weather.search();
+});
+
+document.querySelector(".search-bar").addEventListener("keyup", function (event) {
+  if (event.key == "Enter") {
+  weather.search();
+  }
+});

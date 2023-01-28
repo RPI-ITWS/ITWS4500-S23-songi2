@@ -1,3 +1,4 @@
+
 function getLocation() {
 
   if (navigator.geolocation) {
@@ -7,11 +8,9 @@ function getLocation() {
 }
     
 function showLoc(pos) {
-  console.log("DD");
-  var lat = pos.coords.latitude;
+=  var lat = pos.coords.latitude;
   var long = pos.coords.longitude;
   displayMap(lat, long);
-  console.log("DLKSJ");
   weather.fetchWeather(lat, long);
 }
 
@@ -50,6 +49,7 @@ let weather = {
 };
 
 function displayMap(lat, long){
+  let map = L.map("map").setView([0, 0], 13);
   var msg = "You are Here!"
   map.panTo(new L.LatLng(lat, long));
   L.marker([lat, long]).addTo(map).bindPopup(msg).openPopup();

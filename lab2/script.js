@@ -32,7 +32,7 @@ let weather = {
   displayWeatherCity:function(data){
     var city_lat = data.coord.lat;
     var cit_long = data.coord.lon;
-    this.fetchWeather(lat,long);
+    this.fetchWeather(city_lat, cit_long);
   },
   displayWeather: function (data) {
       var name = data.name; //I am extracting data from the json file now

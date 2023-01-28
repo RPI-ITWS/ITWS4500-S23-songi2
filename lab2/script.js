@@ -1,3 +1,4 @@
+var map = L.map("map").setView([0, 0], 15);
 
 function getLocation() {
 
@@ -21,18 +22,19 @@ function convertFahrenheit(input) {
 let weather = {
   fetchWeather: function (lat, long){ //Fetch helps you to create a request as GET
       fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=d39206d578254def9b2b2af92b7bcdff"
-      ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
+      ).then((response) => {if (response.ok) return response.json();})
       .then((data) => this.displayWeather(data));
   },
   fetchWeatherCity: function (city){ //Fetch helps you to create a request as GET
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=metric&APPID=d39206d578254def9b2b2af92b7bcdff"
-    ).then((response) => {if (!response.ok) alert("No City Was Found"); return response.json();})
+    ).then((response) => {if (!response.ok) alert("Please Enter Valid City"); return response.json();})
     .then((data) => this.displayWeatherCity(data));
   },
   displayWeatherCity:function(data){
     var city_lat = data.coord.lat;
     var cit_long = data.coord.lon;
     this.fetchWeather(city_lat, cit_long);
+    displayMap(city_lat, cit_long);
   },
   displayWeather: function (data) {
       var name = data.name; //I am extracting data from the json file now
@@ -62,7 +64,6 @@ let weather = {
 };
 
 function displayMap(lat, long){
-  let map = L.map("map").setView([0, 0], 15);
   var msg = "Current Place"
   map.panTo(new L.LatLng(lat, long));
   L.marker([lat, long]).addTo(map).bindPopup(msg).openPopup();
@@ -71,9 +72,6 @@ function displayMap(lat, long){
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
-
-
-
 }
 
 

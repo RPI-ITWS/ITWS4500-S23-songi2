@@ -1,4 +1,5 @@
 body{
+  background-color: #023b59;
   flex-direction: column;
   display:flex;    
   height: 100vh;

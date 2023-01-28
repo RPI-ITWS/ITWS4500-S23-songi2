@@ -2,12 +2,18 @@
 function getLocation() {
 
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showLoc, showError);
+    navigator.geolocation.getCurrentPosition(displayLoc, displayError);
   }else{
+    displayDefault();
   }
 }
-    
-function showLoc(pos) {
+function displayDefault(){
+  var lat = 	42.728104;
+  var long = 	-73.687576;
+  displayMap(lat,long);
+  weather.fetchWeather(lat, long);
+}    
+function displayLoc(pos) {
   var lat = pos.coords.latitude;
   var long = pos.coords.longitude;
   displayMap(lat, long);
@@ -64,7 +70,7 @@ function displayMap(lat, long){
 }
 
 
-function showError(error) {
+function displayError(error) {
 
   switch(error.code) {
     case error.PERMISSION_DENIED:

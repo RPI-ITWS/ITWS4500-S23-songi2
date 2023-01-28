@@ -72,7 +72,7 @@ function displayError(error) {
       var long = 	-73.687576;
       displayMap(lat,long);
       weather.fetchWeather(lat, long);
-      document.getElementById("error").innerHTML = "User denied the request for Geolocation. Using default location."
+      document.getElementById("error").innerHTML = "User denied the request for Geolocation. Using default location. Please allow Geolocation to see the weather."
       break;
     case error.POSITION_UNAVAILABLE:
       document.getElementById("error").innerHTML = "Location information is unavailable. Using default location."

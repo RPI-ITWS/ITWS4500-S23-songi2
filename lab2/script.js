@@ -8,7 +8,7 @@ function getLocation() {
 }
     
 function showLoc(pos) {
-=  var lat = pos.coords.latitude;
+  var lat = pos.coords.latitude;
   var long = pos.coords.longitude;
   displayMap(lat, long);
   weather.fetchWeather(lat, long);

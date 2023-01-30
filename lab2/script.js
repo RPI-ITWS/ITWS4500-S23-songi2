@@ -22,7 +22,7 @@ function convertFahrenheit(input) {
 let weather = {
   fetchWeather: function (lat, long){ //Fetch helps you to create a request as GET
       fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&APPID=d39206d578254def9b2b2af92b7bcdff"
-      ).then((response) => {if (!response.ok) alert("Please Enter Valid City"); return response.json();})
+      ).then((response) => {if (response.ok) return response.json();})
       .then((data) => this.displayWeather(data));
   },
   fetchWeatherCity: function (city){ //Fetch helps you to create a request as GET

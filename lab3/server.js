@@ -50,7 +50,7 @@ app.get('/news1', function(req, res){
 app.get('/css', function(req, res){
   res.sendFile(__dirname + '/public/style.css');
 });
-app.get('/left-sie', function(req, res){
+app.get('/left-side', function(req, res){
   res.sendFile(__dirname + '/public/img/left-side.png');
 });
 app.get('/right-side', function(req, res){

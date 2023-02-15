@@ -4,7 +4,6 @@ const app = express()
 
 app.use(express.static('./public'));
 
-// For some reason Sports Data Api is not working
 // app.get('/matches', function(req, res){
 //   request('https://app.sportdataapi.com/api/v1/soccer/matches?apikey=581d6100-abe8-11ed-8bf5-b909ae2d4cd2&season_id=3161&date_from=2022-08-06', function (error,response,body){
 //     if (!error && response.statusCode == 200) {
@@ -32,11 +31,12 @@ const options = {
   }
 };
 
-app.get('/matches.html/match', function(req, res){
+app.get('/match', function(req, res){
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       parsed = JSON.parse(body);
     }
+    console.log(body);
     res.json(parsed);
   });
 })

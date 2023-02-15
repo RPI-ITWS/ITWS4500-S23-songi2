@@ -47,6 +47,9 @@ app.get('/betting', function(req, res){
 app.get('/news1', function(req, res){
   res.sendFile(__dirname + '/public/img/news1.png');
 });
+app.get('/css', function(req, res){
+  res.sendFile(__dirname + '/public/style.css');
+});
 
 app.get('/match', function(req, res){
   request(options, function (error, response, body) {

@@ -61,5 +61,5 @@ app.get('/match', function(req, res){
   });
 });
 
-// app.listen(3000, '127.0.0.1');
-// console.log('Server running at 127.0.0.1:3000');
+app.listen(3000, '127.0.0.1');
+console.log('Server is Running!');

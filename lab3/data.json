@@ -1,3 +1,4 @@
+//https://app.sportdataapi.com/api/v1/soccer/matches?apikey=581d6100-abe8-11ed-8bf5-b909ae2d4cd2&season_id=3161&date_from=2022-08-06
 {
     "query": {
         "apikey": "581d6100-abe8-11ed-8bf5-b909ae2d4cd2",

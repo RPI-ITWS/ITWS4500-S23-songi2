@@ -1,0 +1,7 @@
+.match-background{
+    background:
+        linear-gradient(#1a936f, transparent),
+        linear-gradient(to top left, #88d498, transparent),
+        linear-gradient(to top right, #c6dabf, transparent);
+    background-blend-mode: screen;
+}

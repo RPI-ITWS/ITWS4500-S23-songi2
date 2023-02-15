@@ -5,3 +5,7 @@
         linear-gradient(to top right, #c6dabf, transparent);
     background-blend-mode: screen;
 }
+
+.accordion-button{
+    display:block;
+}

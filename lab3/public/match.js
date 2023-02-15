@@ -4,13 +4,13 @@ $(document).ready(function() {
     getMatch();
 }); 
 
-// function getMatch() {
-//     var poke;
-//     $.ajax({
-//       type: 'GET',
-//       url: '/node/match', 
-//       dataType: 'json'
-//       }).done(function(data){
-//         poke = JSON.stringify(data)
-//       });
-//   }
+function getMatch() {
+    var poke;
+    $.ajax({ 
+      type: 'GET',
+      url: '/node/match', 
+      dataType: 'json'
+      }).done(function(data){
+        poke = JSON.stringify(data)
+      });
+  }

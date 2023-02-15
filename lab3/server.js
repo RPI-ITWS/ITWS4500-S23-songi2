@@ -62,7 +62,6 @@ app.get('/match', function(req, res){
     if (!error && response.statusCode == 200) {
       parsed = JSON.parse(body);
     }
-    console.log(body);
     res.json(parsed);
   });
 });

@@ -37,7 +37,16 @@ const options = {
 
 app.get('/soccer', function(req, res){
   res.sendFile(__dirname + '/public/img/soccer_player.png');
-})
+});
+// app.get('/premier', function(req, res){
+//   res.sendFile(__dirname + '/public/img/premier_logo.png');
+// });
+// app.get('/betting', function(req, res){
+//   res.sendFile(__dirname + '/public/img/betting.png');
+// });
+// app.get('/news1', function(req, res){
+//   res.sendFile(__dirname + '/public/img/news1.png');
+// });
 
 app.get('/match', function(req, res){
   request(options, function (error, response, body) {
@@ -47,7 +56,7 @@ app.get('/match', function(req, res){
     console.log(body);
     res.json(parsed);
   });
-})
+});
 
 app.listen(3000, '127.0.0.1');
 console.log('Server running at 127.0.0.1:3000');

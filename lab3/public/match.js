@@ -13,5 +13,4 @@ function getMatch() {
       }).done(function(data){
         poke = JSON.stringify(data)
       });
-      console.log(poke);
   }

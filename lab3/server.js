@@ -21,6 +21,10 @@ app.use(express.static('./public'));
 //   })
 // });
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+});
+
 const options = {
   method: 'GET',
   url: 'https://football98.p.rapidapi.com/premierleague/results',
@@ -31,6 +35,9 @@ const options = {
   }
 };
 
+app.get('/soccer', function(req, res){
+  res.sendFile(__dirname + 'img/soccer_player.png');
+})
 app.get('/match', function(req, res){
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {

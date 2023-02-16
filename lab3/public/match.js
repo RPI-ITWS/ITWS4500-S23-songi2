@@ -21,5 +21,5 @@ async function getArticles(){
     var data = await response.json();
     let apiInfo = data.results;
     console.log("hey");
-    console.log(apiInfo[0]);
+    console.log(apiInfo[0][0][0][0].homeLogo);
 }

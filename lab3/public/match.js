@@ -20,4 +20,5 @@ async function getArticles(){
     const response = await fetch(`https://songi2.eastus.cloudapp.azure.com/node/match`);
     var data = await response.json();
     console.log(data);
+    console.log(data[0][0]);
 }

@@ -5,4 +5,4 @@ https://michalsnik.github.io/aos/
 Inspired boostrap example
 https://github.com/StartBootstrap/startbootstrap-freelancer
 Football API
-https://rapidapi.com/GiulianoCrescimbeni/api/football98/
+https://rapidapi.com/GiulianoCrescimbeni/api/football98/    

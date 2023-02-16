@@ -19,7 +19,5 @@ $(document).ready(function() {
 async function getArticles(){
     const response = await fetch(`https://songi2.eastus.cloudapp.azure.com/node/match`);
     var data = await response.json();
-    let apiInfo = data.results;
-    console.log("hey");
-    console.log(apiInfo[0][0][0][0].homeLogo);
+    console.log(data);
 }

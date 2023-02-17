@@ -17,7 +17,7 @@ $(document).ready(function() {
 //   }
 
 async function getArticles(){
-    const response = await fetch(`node/match`);
+    const response = await fetch(`/node/match`);
     var data = await response.json();
     var display = "";
     for (let i = 0; i < 4; i++){

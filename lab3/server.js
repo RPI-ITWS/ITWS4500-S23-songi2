@@ -35,6 +35,15 @@ const options = {
   }
 };
 
+app.get('/match', function(req, res){
+  request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      parsed = JSON.parse(body);
+    }
+    res.json(parsed);
+  });
+});
+
 app.get('/soccer', function(req, res){
   res.sendFile(__dirname + '/public/img/soccer_player.png');
 });
@@ -57,13 +66,16 @@ app.get('/right-side', function(req, res){
   res.sendFile(__dirname + '/public/img/right-side.png');
 });
 
-app.get('/match', function(req, res){
-  request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      parsed = JSON.parse(body);
-    }
-    res.json(parsed);
-  });
+app.delete('/api/delete', function(req, res){
+  res.send("This should delete something, working in progres...");
+});
+
+app.post('/api/post', function(req, res){
+  res.send("This should post something, working in progres...");
+});
+
+app.put('/api/put', function(req, res){
+  res.send("This should put something, working in progres...");
 });
 
 app.listen(3000, '127.0.0.1');

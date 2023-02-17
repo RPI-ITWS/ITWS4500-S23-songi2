@@ -29,7 +29,7 @@ async function getArticles(){
     for (let i = 0; i < 4; i++){
         var keys = Object.keys(data[0])[i];
         console.log(keys);
-        display += `<div class="accordion-item  container py-5 my-5 opacity-75 rounded-2" style="background-color: #28aa83;">
+        display += `<div class="accordion-item  container py-5 my-5 opacity-75 rounded-2" style="background-color: #e2725b;">
         <h2 class="accordion-header " id="flush-heading${i}">
             <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${i}" aria-expanded="false" aria-controls="flush-collapse${i}">
                 <h1>${keys}</h1>
@@ -43,20 +43,20 @@ async function getArticles(){
             const awayTeam = data[0][keys][j]["awayTeam"];
             const homeTeamScore = data[0][keys][j]["homeTeamScore"];
             const awayTeamScore = data[0][keys][j]["awayTeamScore"];
-            display += `<div class="accordion-body py-5" >
-            <div class="row text-center" style="background-color: #79d2b8;">
-                <div class="col text-center">
-                    <h5>Home Team</h5>
+            display += `<div class="accordion-body py-5 mx-5" >
+            <div class="row text-center rounded-2" style="background-color: #E1E6E1;">
+                <div class="col py-5 text-center">
+                    <h2>Home Team</h2>
                     <img src="${homeLogo}">
-                    <h5>${homeTeam}</h5>
+                    <h4>${homeTeam}</h4>
                 </div>
-                <div class="col text-center">
-                    <h5>Away Team</h5>
+                <div class="col py-5 text-center">
+                    <h2>Away Team</h2>
                     <img src="${awayLogo}">
-                    <h5>${awayTeam}</h5>
+                    <h4>${awayTeam}</h4>
                 </div>
-                <h1>${homeTeamScore} - ${awayTeamScore}</h1>
-                <h2>FT</h2>
+                <h4>${homeTeamScore} - ${awayTeamScore}</h4>
+                <h5>FT</h5>
             </div>
         </div>`;
             // console.log(homeLogo);
@@ -66,9 +66,11 @@ async function getArticles(){
             // console.log(homeTeamScore);
             // console.log(awayTeamScore);
             }
-        display += `</div>
+        display += `<button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${i}" aria-expanded="false" aria-controls="flush-collapse${i}">
+        <h1>Collapse</h1>
+    </button></div>
         </div>
       </div>`;
-    }
+    }   
     $(database).html(display);
 }

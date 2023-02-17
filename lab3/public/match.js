@@ -16,14 +16,8 @@ $(document).ready(function() {
 //       });
 //   }
 
-// async function getArticles(){
-//     const response = await fetch(`https://songi2.eastus.cloudapp.azure.com/node/match`);
-//     var data = await response.json();
-//     console.log(data);
-//     console.log(data["match"][0]);
-// }
 async function getArticles(){
-    const response = await fetch(`data2.json`);
+    const response = await fetch(`https://songi2.eastus.cloudapp.azure.com/node/match`);
     var data = await response.json();
     var display = "";
     for (let i = 0; i < 4; i++){

@@ -67,7 +67,7 @@ async function getArticles(){
             // console.log(awayTeamScore);
             }
         display += `<button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${i}" aria-expanded="false" aria-controls="flush-collapse${i}">
-        <h1>Collapse</h1>
+        <h5>Collapse</h5>
     </button></div>
         </div>
       </div>`;

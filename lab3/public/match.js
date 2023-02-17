@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
     console.log("hello");
-    getArticles();
 }); 
 
 // function getMatch() {
@@ -16,7 +15,7 @@ $(document).ready(function() {
 //       });
 //   }
 
-async function getArticles(){
+async function getMatchdata(){
     const response = await fetch(`/node/match`);
     var data = await response.json();
     var display = "";

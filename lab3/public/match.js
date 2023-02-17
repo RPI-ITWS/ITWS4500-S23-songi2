@@ -29,7 +29,7 @@ async function getArticles(){
     for (let i = 0; i < 4; i++){
         var keys = Object.keys(data[0])[i];
         console.log(keys);
-        display += `<div class="accordion-item  container py-5 my-5 opacity-75 rounded-2" style="background-color: #e2725b;">
+        display += `<div class="accordion-item container py-5 my-5 opacity-75 rounded-2" data-aos="zoom-in" style="background-color: #e2725b;">
         <h2 class="accordion-header " id="flush-heading${i}">
             <button class="accordion-button collapsed text-center" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${i}" aria-expanded="false" aria-controls="flush-collapse${i}">
                 <h1>${keys}</h1>

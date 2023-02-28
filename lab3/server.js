@@ -78,5 +78,5 @@ app.put('/api/put', function(req, res){
   res.send("This should put something, working in progres...");
 });
 
-app.listen(3000);
+app.listen(3000, '127.0.0.1');
 console.log('Server is Running!');

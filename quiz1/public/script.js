@@ -13,3 +13,11 @@ $('document').ready(() => {
     }
 })
 
+$.ajax({
+    type: 'GET',
+    url: '/pokemon', 
+    dataType: 'json'
+  }).done(function(data){
+    poke = JSON.stringify(data)
+    console.log("url" + poke)
+  });

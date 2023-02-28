@@ -14,8 +14,11 @@ app.post('/addUser',function (req, res){
     const user = {
       name: req.body.name,
     }
-    console.log(user)
-    res.send(user)
+    fetch('http://universities.hipolabs.com/search?name=' + user.body)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+    console.log(data)
+    res.send(data)
   });
 
 app.get('/addUser', function (req, res){

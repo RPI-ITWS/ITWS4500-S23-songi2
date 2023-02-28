@@ -12,14 +12,30 @@ function searchUniversities(event) {
   
     const query = searchInput.value;
   
-    fetch(`https://songi2.eastus.cloudapp.azure.com/node/university?university=${query}`)
+    fetch(`/university?university=${query}`)
       .then(response => response.json())
       .then(data => {
         // clear previous results
         resultsDiv.innerHTML = '';
   
         if (data.length === 0) {
-          resultsDiv.innerHTML = 'No results found.';
+            // Display data from Rensselaer Polytechnic Institute on default
+            const universityDiv = document.createElement('div');
+            universityDiv.classList.add('university');
+    
+            const nameEl = document.createElement('h2');
+            nameEl.innerText = 'Rensselaer Polytechnic Institute';
+            universityDiv.appendChild(nameEl);
+    
+            const countryEl = document.createElement('p');
+            countryEl.innerText = `Country: USA`;
+            universityDiv.appendChild(countryEl);
+    
+            const websiteEl = document.createElement('p');
+            websiteEl.innerText = `Website: https://www.rpi.edu/`;
+            universityDiv.appendChild(websiteEl);
+    
+            resultsDiv.appendChild(universityDiv);    
           return;
         }
   

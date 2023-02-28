@@ -66,6 +66,17 @@ app.get('/right-side', function(req, res){
   res.sendFile(__dirname + '/public/img/right-side.png');
 });
 
+
+
+
+
+
+
+
+
+
+
+
 app.delete('/api/delete', function(req, res){
   res.send("This should delete something, working in progres...");
 });

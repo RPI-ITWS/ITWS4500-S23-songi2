@@ -12,7 +12,7 @@ function searchUniversities(event) {
   
     const query = searchInput.value;
   
-    fetch(`/university?university=${query}`)
+    fetch(`https://songi2.eastus.cloudapp.azure.com/node/university?university=${query}`)
       .then(response => response.json())
       .then(data => {
         // clear previous results

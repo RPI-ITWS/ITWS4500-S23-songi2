@@ -69,7 +69,22 @@ app.get('/right-side', function(req, res){
 
 
 
+const check = {
+  method: 'GET',
+  url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
+  qs: {team: '34'},
+  headers: {
+    'X-RapidAPI-Key': 'e297e832a7mshf3f9db167479cc7p1fe24fjsn6456a0d675c1',
+    'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com',
+    useQueryString: true
+  }
+};
 
+request(check, function (error, response, body) {
+	if (error) throw new Error(error);
+
+	console.log(body);
+});
 
 
 

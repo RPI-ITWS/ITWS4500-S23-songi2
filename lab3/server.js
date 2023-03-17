@@ -25,24 +25,24 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://football98.p.rapidapi.com/premierleague/results',
-//   headers: {
-//     'X-RapidAPI-Key': 'e297e832a7mshf3f9db167479cc7p1fe24fjsn6456a0d675c1',
-//     'X-RapidAPI-Host': 'football98.p.rapidapi.com',
-//     useQueryString: true
-//   }
-// };
+const options = {
+  method: 'GET',
+  url: 'https://football98.p.rapidapi.com/premierleague/results',
+  headers: {
+    'X-RapidAPI-Key': 'e297e832a7mshf3f9db167479cc7p1fe24fjsn6456a0d675c1',
+    'X-RapidAPI-Host': 'football98.p.rapidapi.com',
+    useQueryString: true
+  }
+};
 
-// app.get('/match', function(req, res){
-//   request(options, function (error, response, body) {
-//     if (!error && response.statusCode == 200) {
-//       parsed = JSON.parse(body);
-//     }
-//     res.json(parsed);
-//   });
-// });
+app.get('/match', function(req, res){
+  request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      parsed = JSON.parse(body);
+    }
+    res.json(parsed);
+  });
+});
 
 app.get('/soccer', function(req, res){
   res.sendFile(__dirname + '/public/img/soccer_player.png');
@@ -80,7 +80,7 @@ const check = {
   }
 };
 app.get('/checking', function(req, res){
-  request(options, function (error, response, body) {
+  request(check, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       parsed = JSON.parse(body);
     }

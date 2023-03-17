@@ -79,11 +79,13 @@ const check = {
     useQueryString: true
   }
 };
-
-request(check, function (error, response, body) {
-	if (error) throw new Error(error);
-
-	console.log(body);
+app.get('/checking', function(req, res){
+  request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      parsed = JSON.parse(body);
+    }
+    res.json(parsed);
+  });
 });
 
 

@@ -16,7 +16,7 @@ $(document).ready(function() {
 //   }
 
 async function getMatchdata(){
-    const response = await fetch(`/node/match`);
+    const response = await fetch(`http://localhost:5000/match`);
     var data = await response.json();
     var display = "";
     for (let i = 0; i < 4; i++){

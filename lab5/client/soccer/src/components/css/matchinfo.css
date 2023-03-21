@@ -1,0 +1,12 @@
+.match-background{
+    min-height: 100vh;
+    background:
+        linear-gradient(#e2725b, transparent),
+        linear-gradient(to top left, #3F826D, transparent),
+        linear-gradient(to top right, #E1E6E1, transparent);
+    background-blend-mode: screen;
+}
+
+.accordion-button{
+    display:block;
+}

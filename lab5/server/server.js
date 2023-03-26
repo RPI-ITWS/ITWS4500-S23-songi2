@@ -1,12 +1,17 @@
 const request = require('request');
 const express = require('express');
 const bodyParser = require("body-parser");
+const path = require('path');
 const app = express();
 const fs = require('fs');
 // This is to have the port can connect to data from other port
-const cors = require('cors');
-app.use(cors());
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 // Connecting Mong
 const MongoClient = require('mongodb').MongoClient;
@@ -191,5 +196,5 @@ app.get('/match', function(req, res){
   });
 });
 
-app.listen(3001, '127.0.0.1');
+app.listen(3000, '127.0.0.1');
 console.log('Server is Running! at 5000');

@@ -18,6 +18,10 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://saja0930:96btDor4ByE2NiNX@websci.atlvojr.mongodb.net/Web_Sci?retryWrites=true&w=majority';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
+app.get ('/js/main.f2bcc922.js'), async (req, res) => {
+  res.sendFile(__dirname + '../client/build/static/main.f2bcc922.js');
+};
+
 //-----------this is for GET -------------
 // This will get all soccer_data from the database
 app.get("/db", async (req, res) => {

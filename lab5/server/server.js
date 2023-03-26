@@ -9,6 +9,10 @@ app.use(bodyParser.json());
 
 app.use('/static', express.static(path.join(__dirname, '../client/build')));
 
+app.get('https://songi2.eastus.cloudapp.azure.com/static/js/main.f2bcc922.js', function(req, res){
+  res.sendFile(__dirname + '../clinet/build/js/main.f2bcc922.js');
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });

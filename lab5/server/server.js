@@ -7,7 +7,7 @@ const fs = require('fs');
 // This is to have the port can connect to data from other port
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use('/static', express.static(path.join(__dirname, '../client/build')));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));

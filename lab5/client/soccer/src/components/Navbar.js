@@ -11,6 +11,7 @@ const Navigationbar = () => {
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/matchinfo'>Matches History</Nav.Link>
+            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/teamdata'>Team Data</Nav.Link>
             <Nav.Link as={NavLink} to="/" className="nav-link py-3 px-0 px-lg-3">Betting</Nav.Link>
             <Nav.Link as={NavLink} to="/" className="nav-link py-3 px-0 px-lg-3">Current News</Nav.Link>
           </Nav>

@@ -3,3 +3,5 @@ Mar 20th. Made lots of initial commit. It took a while for me to convert pretty 
 The problem I had with my API is that it will charge me if it requests for more than 100 request per day. Therefore, I had to upload a json file for my database and instead of calling my api whenever I want to reset the database, I will just iterate through the json files and reset the database. This was hard but I realized this package called "fs" which really helped to read the file and right them out to the MongoDB database. Ultimately, I took a lot of time to get the GET and DELETE request fully working as well as the reset request which I used POST for. I would have to work with creating a form for POST and PUT request for the data.
 
 ---
+
+Mar 23th. Map for looping through database.

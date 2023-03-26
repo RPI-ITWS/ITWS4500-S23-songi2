@@ -66,9 +66,6 @@ app.get('/right-side', function(req, res){
   res.sendFile(__dirname + '/public/img/right-side.png');
 });
 
-
-
-
 const check = {
   method: 'GET',
   url: 'https://api-football-v1.p.rapidapi.com/v3/players/squads',
@@ -87,12 +84,6 @@ app.get('/checking', function(req, res){
     res.json(parsed);
   });
 });
-
-
-
-
-
-
 
 app.delete('/api/delete', function(req, res){
   res.send("This should delete something, working in progres...");

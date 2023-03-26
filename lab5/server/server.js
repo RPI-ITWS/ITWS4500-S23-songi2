@@ -9,10 +9,6 @@ app.use(bodyParser.json());
 
 app.use('/static', express.static(path.join(__dirname, '../client/build')));
 
-// app.get('https://songi2.eastus.cloudapp.azure.com/static/js/main.f2bcc922.js', function(req, res){
-//   res.sendFile(__dirname + '../clinet/build/js/main.f2bcc922.js');
-// });
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
@@ -21,10 +17,6 @@ app.get('/', function (req, res) {
 const MongoClient = require('mongodb').MongoClient;
 const uri = 'mongodb+srv://saja0930:96btDor4ByE2NiNX@websci.atlvojr.mongodb.net/Web_Sci?retryWrites=true&w=majority';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-app.get ('https://songi2.eastus.cloudapp.azure.com/js/main.f2bcc922.js'), async (req, res) => {
-  res.sendFile(__dirname + '../client/build/static/main.f2bcc922.js');
-};
 
 //-----------this is for GET -------------
 // This will get all soccer_data from the database

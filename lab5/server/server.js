@@ -7,7 +7,7 @@ const fs = require('fs');
 // This is to have the port can connect to data from other port
 app.use(bodyParser.json());
 
-app.use('/node/static', express.static(path.join(__dirname, '../client/build/static')));
+app.use('/node/static', express.static('https://songi2.eastus.cloudapp.azure.com/node/static'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));

@@ -7,7 +7,8 @@ const fs = require('fs');
 // This is to have the port can connect to data from other port
 app.use(bodyParser.json());
 
-app.use('/static', express.static(path.join(__dirname, '../client/build')));
+app.use(express.static('../client/build'));
+// app.use(express.static(path.join(__dirname, '../client/build')));
 // app.use('/node', express.static(path.join(__dirname, '../client/build')));
 
 // Connecting Mong

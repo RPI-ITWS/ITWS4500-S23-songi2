@@ -8,7 +8,7 @@ const fs = require('fs');
 app.use(bodyParser.json());
 
 // app.use('/static'. express.static(path.join(__dirname, '../client/build')));
-app.use(express.static("../client/build"));
+app.use('/node', express.static(path.join(__dirname, '../client/build')));
 
 // Connecting Mong
 const MongoClient = require('mongodb').MongoClient;

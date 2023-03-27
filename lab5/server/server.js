@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
-app.use(express.static('../client/build'));
+app.use('/node', express.static(path.join(__dirname, '../client/build')));
 // app.use(express.static(path.join(__dirname, '../client/build')));
 // app.use('/node', express.static(path.join(__dirname, '../client/build')));
 

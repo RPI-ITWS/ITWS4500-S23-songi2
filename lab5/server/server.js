@@ -7,27 +7,6 @@ const fs = require('fs');
 // This is to have the port can connect to data from other port
 app.use(bodyParser.json());
 
-// Create a reusable MongoDB client
-const check = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-
-// Define a function to connect to MongoDB
-const connectToDatabase = async () => {
-  if (!check.isConnected()) {
-    try {
-      await check.connect();
-      console.log("Connected to MongoDB");
-    } catch (err) {
-      console.error(err);
-    }
-  }
-};
-
-// Call the connectToDatabase function
-connectToDatabase();
-
 app.use(express.static('../client/build'));
 // app.use(express.static(path.join(__dirname, '../client/build')));
 // app.use('/node', express.static(path.join(__dirname, '../client/build')));

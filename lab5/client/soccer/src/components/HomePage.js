@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './css/homepage.css';
-import soccerPlayerImg from './node/static/media/soccer_player.png';
+import soccerPlayerImg from './img/soccer_player.png';
 import bettingImg from './img/betting.png';
 import newsImg from './img/news1.png';
 import premierImg from './img/premier_logo.png';
@@ -33,7 +33,7 @@ const HomePage = () => {
             </div>
 
             <div class="col-lg-6 d-flex align-items-center">
-                <img src={premierImg} class="img-fluid" alt="https://1000logos.net/allpng/"/>
+                <img src={`${process.env.PUBLIC_URL}/static/media/premier_logo.1681bf2c1fb5bd757de1.png`} class="img-fluid" alt="https://1000logos.net/allpng/"/>
             </div>
 
             </div>

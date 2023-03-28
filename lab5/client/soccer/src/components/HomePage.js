@@ -33,7 +33,7 @@ const HomePage = () => {
             </div>
 
             <div class="col-lg-6 d-flex align-items-center">
-                <img src={`${process.env.PUBLIC_URL}/static/media/premier_logo.1681bf2c1fb5bd757de1.png`} class="img-fluid" alt="https://1000logos.net/allpng/"/>
+                <img src={`${process.env.PUBLIC_URL}/node/static/media/premier_logo.1681bf2c1fb5bd757de1.png`} class="img-fluid" alt="https://1000logos.net/allpng/"/>
             </div>
 
             </div>
@@ -43,7 +43,7 @@ const HomePage = () => {
             <div class="row gx-0">
 
             <div class="col-lg-6 d-flex align-items-center" >
-                <img src={bettingImg} class="img-fluid" alt="https://www.pngwing.com/en/free-png-bbppy"/>
+                <img src={`${process.env.PUBLIC_URL}/node/static/media/betting.f5a290d290e1ee3a35dc.png`} class="img-fluid" alt="https://www.pngwing.com/en/free-png-bbppy"/>
             </div>
 
             <div class="col-lg-6 d-flex flex-column justify-content-center" >
@@ -69,7 +69,7 @@ const HomePage = () => {
             </div>
 
             <div class="col-lg-6 d-flex align-items-center">
-                <img src={newsImg} class="img-fluid" alt="https://www.pngwing.com/en/free-png-bhjsk/download"/>
+                <img src={`${process.env.PUBLIC_URL}/node/static/media/news1.df01c80dd19c8d521258.png`} class="img-fluid" alt="https://www.pngwing.com/en/free-png-bhjsk/download"/>
             </div>
 
             </div>

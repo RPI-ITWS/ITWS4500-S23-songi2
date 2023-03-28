@@ -59,14 +59,14 @@ const MatchInfo = () => {
           <div className="col" data-aos="fade-right" data-aos-delay="400">
             <img
               className="mb-5"
-              src={LeftsideImg}
+              src={`${process.env.PUBLIC_URL}/node/static/media/left-side.84264797199cceeed914.png`}
               alt="https://www.vecteezy.com/vector-art/7523303-shadow-of-running-football-player"
             />
           </div>
           <div className="col" data-aos="fade-left" data-aos-delay="800">
             <img
               className="mb-5"
-              src={RightsideImg}
+              src={`${process.env.PUBLIC_URL}/node/static/media/right-side.9837381aca584a1db5c3.png`}
               alt="https://www.vecteezy.com/vector-art/7523304-black-shadow-of-a-football-player-on-a-white-background"
             />
           </div>

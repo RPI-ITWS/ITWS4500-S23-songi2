@@ -1,7 +1,0 @@
-.spectrum-background {
-    background:
-        linear-gradient(#3a4385, transparent),
-        linear-gradient(to top left, #D6D6D6, transparent),
-        linear-gradient(to top right, #DF1B3F, transparent);
-    background-blend-mode: screen;
-}

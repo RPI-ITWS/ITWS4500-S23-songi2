@@ -15,9 +15,9 @@ const App = () => {
 }
 const Main = () => (
   <Routes>
-    <Route exact path="/" element={<HomePage />} />
-    <Route exact path="/matchinfo" element={<MatchInfo />} />
-    <Route exact path="/teamdata" element={<TeamData />} />
+    <Route exact path="/node/" element={<HomePage />} />
+    <Route exact path="/node/matchinfo" element={<MatchInfo />} />
+    <Route exact path="/node/teamdata" element={<TeamData />} />
   </Routes>
 )
 

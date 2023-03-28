@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './css/homepage.css';
-import soccerPlayerImg from './img/soccer_player.png';
+import soccerPlayerImg from './node/static/media/soccer_player.png';
 import bettingImg from './img/betting.png';
 import newsImg from './img/news1.png';
 import premierImg from './img/premier_logo.png';

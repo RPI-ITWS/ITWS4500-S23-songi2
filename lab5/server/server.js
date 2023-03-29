@@ -71,7 +71,6 @@ app.post('/db/reset', async (req, res) => {
   }
 });
 
-
   //-----------this is for DELETE ------------------
 // Delete all teams from database
 app.delete("/db", async (req, res) => {

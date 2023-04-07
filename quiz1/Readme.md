@@ -13,6 +13,6 @@ https://songi2.eastus.cloudapp.azure.com/node/matches.html
 OR
 https://songi2.eastus.cloudapp.azure.com/node and click match history.
 
-You don't need to run it on your computer, it wokrs fine with Azure. 
+You don't need to run it on your computer, it works fine with Azure. 
 When a user types in a name of a university, the corresponding data about that university appears on the right side.
 If there are multiple universities corresponding to that name, it displays all of them. 

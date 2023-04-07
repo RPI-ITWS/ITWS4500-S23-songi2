@@ -1,6 +1,7 @@
 * README on Apr 7th 
 * Direction:
   ssh into my vm. songi2.eastus.cloudapp.azure.com
+  
   Azure Password for Dr.Callahan: helpmegraduateplz
   cd /var/www/html/ITWS4500-S23-songi2/quiz1
   node server.js

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b2b53ae.css",
+    "main.js": "/static/js/main.b2c6f596.js",
+    "static/js/787.56b3689e.chunk.js": "/static/js/787.56b3689e.chunk.js",
+    "static/media/betting.png": "/static/media/betting.f5a290d290e1ee3a35dc.png",
+    "static/media/news1.png": "/static/media/news1.df01c80dd19c8d521258.png",
+    "static/media/premier_logo.png": "/static/media/premier_logo.1681bf2c1fb5bd757de1.png",
+    "static/media/right-side.png": "/static/media/right-side.9837381aca584a1db5c3.png",
+    "static/media/left-side.png": "/static/media/left-side.84264797199cceeed914.png",
+    "index.html": "/index.html",
+    "main.2b2b53ae.css.map": "/static/css/main.2b2b53ae.css.map",
+    "main.b2c6f596.js.map": "/static/js/main.b2c6f596.js.map",
+    "787.56b3689e.chunk.js.map": "/static/js/787.56b3689e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b2b53ae.css",
+    "static/js/main.b2c6f596.js"
+  ]
+}

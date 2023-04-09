@@ -10,9 +10,9 @@ const Navigationbar = () => {
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/matchinfo'>Matches History</Nav.Link>
-            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/teamdata'>Team Data</Nav.Link>
-            <Nav.Link as={NavLink} to="/node/" className="nav-link py-3 px-0 px-lg-3">Betting</Nav.Link>
+            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/matchinfo'>Matches History</Nav.Link>
+            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/teamdata'>Team Data</Nav.Link>
+            <Nav.Link as={NavLink} to="/node/visualdata" className="nav-link py-3 px-0 px-lg-3">Visualization</Nav.Link>
             <Nav.Link as={NavLink} to="/node/" className="nav-link py-3 px-0 px-lg-3">Current News</Nav.Link>
           </Nav>
         </Navbar.Collapse>

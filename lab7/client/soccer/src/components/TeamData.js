@@ -21,7 +21,7 @@ const TeamData = () => {
     const database = document.getElementById('database');
     //If input field is empty
     if (number === "") {
-        fetch("http://localhost:3001/db")
+        fetch("/node/db")
         .then((response) => response.json())
         .then((data) => {
           let count = 0;
@@ -57,7 +57,7 @@ const TeamData = () => {
           console.error("Error fetching data:", error);
         });
     } else { //If input is not empty
-        fetch(`http://localhost:3001/db/${number}`)
+        fetch(`/node/db/${number}`)
         .then((response) => response.json())
         .then((data) => {
             const teamName = data.response[0].team.name;
@@ -124,7 +124,7 @@ const handleDeleteSubmit = async (event) => {
     if (number.trim() === '') {
         // Delete all teams from database
         try {
-          await fetch('http://localhost:3001/db', {
+          await fetch('/node/db', {
             method: 'DELETE'
           });
           display = `<div class="center">All teams deleted from database</div>`;
@@ -135,7 +135,7 @@ const handleDeleteSubmit = async (event) => {
       } else {
         // Delete the team with corresponding id and number
         try {
-          const response = await fetch(`http://localhost:3001/db/${number}`, {
+          const response = await fetch(`/node/db/${number}`, {
             method: 'DELETE'
           });
           const data = await response.json();
@@ -154,7 +154,7 @@ const handleReset = async (event) => {
     var display = '';
     const database = document.getElementById('database');
     try {
-        const response = await fetch('http://localhost:3001/db/reset', {
+        const response = await fetch('/node/db/reset', {
         method: 'POST'
         });
         const data = await response.json();
@@ -170,7 +170,7 @@ const handleReset = async (event) => {
     event.preventDefault();
     const database = document.getElementById('database');
     //first count the datase and figure out the id for this new doc
-    const check = await fetch("http://localhost:3001/db");
+    const check = await fetch("/node/db");
     const check_data = await check.json();
     let highest_team_id = 0;
     check_data.forEach(doc => {
@@ -182,12 +182,12 @@ const handleReset = async (event) => {
 
     //update a new doc
     highest_team_id++;
-    const response = await fetch("http://localhost:3001/newDoc.json");
+    const response = await fetch("/node/newDoc.json");
     const data = await response.json();
     data.parameters.team = highest_team_id.toString();
     data.response[0].team.id = highest_team_id;
     data.response[0].team.name = tName;
-    await fetch("http://localhost:3001/newDoc.json", {
+    await fetch("/node/newDoc.json", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -195,7 +195,7 @@ const handleReset = async (event) => {
       body: JSON.stringify(data),
     });
     //upload this json file to the database 
-    await fetch("http://localhost:3001/db", {
+    await fetch("/node/db", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -220,7 +220,7 @@ const handleReset = async (event) => {
   
     if (tId.length === 0) {
       // If tID is blank, update the entire database
-      const url = "http://localhost:3001/db";
+      const url = "/node/db";
       const response = await fetch(url, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -232,7 +232,7 @@ const handleReset = async (event) => {
       $(database).html(display);
     } else {
       // If tID is not blank, update the team with the corresponding ID
-      const url = `http://localhost:3001/db/${tId}`;
+      const url = `/node/db/${tId}`;
       const response = await fetch(url, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

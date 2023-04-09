@@ -13,7 +13,7 @@ const MatchInfo = () => {
   }, []);
 
   const fetchMatchData = async () => {
-    const response = await fetch(`http://localhost:3001/match`);
+    const response = await fetch(`/node/match`);
     const data = await response.json();
     var display = '';
     const database = document.getElementById('database');

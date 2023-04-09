@@ -20,7 +20,7 @@ const Main = () => (
     <Route exact path="/node/matchinfo" element={<MatchInfo />} />
     <Route exact path="/node/teamdata" element={<TeamData />} />
     <Route exact path="/node/visualdata" element={<VisualData />} />
-  </Routes>
+  </Routes> 
 )
 
 export default App

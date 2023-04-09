@@ -12,7 +12,7 @@ const Navigationbar = () => {
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/matchinfo'>Matches History</Nav.Link>
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/teamdata'>Team Data</Nav.Link>
-            <Nav.Link as={NavLink} to="/node/" className="nav-link py-3 px-0 px-lg-3">Betting</Nav.Link>
+            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to="/node/visualdata" >VisualData</Nav.Link>
             <Nav.Link as={NavLink} to="/node/" className="nav-link py-3 px-0 px-lg-3">Current News</Nav.Link>
           </Nav>
         </Navbar.Collapse>

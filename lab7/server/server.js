@@ -4,13 +4,10 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const app = express();
 const fs = require('fs');
-const cors = require('cors');
 // This is to have the port can connect to data from other port
-app.use(cors());
 app.use(bodyParser.json());
 
 app.use(express.static('../client/build'));
-
 
 // app.use(express.static(path.join(__dirname, '../client/build')));
 // app.use('/node', express.static(path.join(__dirname, '../client/build')));
@@ -197,5 +194,5 @@ app.get('/match', function(req, res){
   });
 });
 
-app.listen(3001, '127.0.0.1');
+app.listen(3000, '127.0.0.1');
 console.log('Server is Running!');

@@ -21,7 +21,7 @@ const Main = () => (
     <Route exact path="/node/matchinfo" element={<MatchInfo />} />
     <Route exact path="/node/teamdata" element={<TeamData />} />
     <Route exact path="/node/visualdata" element={<VisualData />} />
-    <Route exact path="/node/betting" element={<BettingTable/>} />
+    <Route exact path="/node/betting" element={<BettingTable />} />
   </Routes> 
 )
 

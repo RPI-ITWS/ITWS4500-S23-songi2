@@ -1,8 +1,11 @@
-How to run lab7!
+How to run lab8
 
-cd into /var/www/html/ITWS4500-S23-songi2/lab5/server
+cd into /var/www/html/ITWS4500-S23-songi2/lab8/server
 and TYPE node server.js and everything should be hosted in https://songi2.eastus.cloudapp.azure.com/node
 
-Overall, this lab was relatively easy compare to lab5. I had to use d3 react components. I created a webpage where user can click on the button to get scatter plot for average age for teams wihtin the database or you can get the average age for each position within the team.
+I was looking through my website and thinking what was missing for my website. My original plan of this website was to create a soccer site where users can see the stats of players and match history with betting oddes to predict which team will win the game. That is why I found a another API which will give back betting odds for games that are taking place today.
+For creativity, I searched the web to find an API that will give back the betting odds of the game that is taking place within 12 hours. I was decorated the site with html and css. 
+Overall, my website becamse successful with multiple APIs and player data to give enough information to the users to get their prediction correct for soccer games.
 
-For creativity: I made it so that the user can choose which data they want to see. Also, I have a input box where user can type in the team ID and you get to see the data about the team ID you have inputted. Also I made chartRef which will display different graphs with data based on the buttons user have clicked onto. I have used all the data from the my mongodb.
+Sources:
+API: https://newsapi.org/

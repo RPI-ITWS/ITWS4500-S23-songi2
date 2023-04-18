@@ -225,17 +225,17 @@
           </div>
         <div ref={chartRef} className='my-5'></div>
         <div className="row">
-        <div className="col-md-6">
-          <button type="submit" className="btn btn-primary" onClick={handleAverageGraph}>Scatter Plot for Average Age</button>
-        </div>
-        <div className="col-md-6">
-          <label>
-            Enter team ID:
-            <input type="text" value={teamId} onChange={handleTeamIdChange} />
-          </label>
-          <button type="submit" className="btn btn-warning" onClick={handleTeamGraph}>Get Graph for Team</button>
-        </div>
-      </div>
+  <div className="col-md-6">
+    <button type="submit" className="btn btn-primary" onClick={handleAverageGraph}>Scatter Plot for Average Age</button>
+  </div>
+  <div className="col-md-6">
+    <label>
+      Enter team ID:
+      <input type="text" value={teamId} onChange={handleTeamIdChange} />
+    </label>
+    <button type="submit" className="btn btn-warning" onClick={handleTeamGraph}>Get Graph for Team</button>
+  </div>
+</div>
       </div>
     );
   };

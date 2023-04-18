@@ -13,7 +13,7 @@ const Navigationbar = () => {
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/matchinfo'>Matches History</Nav.Link>
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to='/node/teamdata'>Team Data</Nav.Link>
             <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to="/node/visualdata" >VisualData</Nav.Link>
-            <Nav.Link as={NavLink} to="/node/betting" className="nav-link py-3 px-0 px-lg-3">Betting Odds</Nav.Link>
+            <Nav.Link as={NavLink} className="nav-link py-3 px-0 px-lg-3" to="/node/betting" >Betting Odds</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

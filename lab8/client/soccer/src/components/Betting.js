@@ -12,9 +12,9 @@ function BettingTable() {
   }, []);
 
   return (
-    <div className="team_background">
+    <div className="betting_background">
       <div className="container d-flex align-items-center flex-column my-5 py-5 text-center">
-      <img className="mb-5" src={BettingImg} alt="https://www.pngkey.com/detail/u2w7q8a9y3o0u2a9_info-soccer-team-black-and-white/#google_vignette" />
+      <img className="mb-5" src={`${process.env.PUBLIC_URL}/node/static/media/bettings.544937fcbb216e9a3297.png`} alt="https://www.pngkey.com/detail/u2w7q8a9y3o0u2a9_info-soccer-team-black-and-white/#google_vignette" />
         <table className="table my-5">
           <thead>
             <tr>

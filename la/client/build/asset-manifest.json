@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.135e26bc.css",
-    "main.js": "/static/js/main.a6b7e67e.js",
+    "main.css": "/static/css/main.8982d5d1.css",
+    "main.js": "/static/js/main.d4b31267.js",
     "static/js/787.56b3689e.chunk.js": "/static/js/787.56b3689e.chunk.js",
     "static/media/betting.png": "/static/media/betting.f5a290d290e1ee3a35dc.png",
     "static/media/bettings.png": "/static/media/bettings.544937fcbb216e9a3297.png",
@@ -10,12 +10,12 @@
     "static/media/right-side.png": "/static/media/right-side.9837381aca584a1db5c3.png",
     "static/media/left-side.png": "/static/media/left-side.84264797199cceeed914.png",
     "index.html": "/index.html",
-    "main.135e26bc.css.map": "/static/css/main.135e26bc.css.map",
-    "main.a6b7e67e.js.map": "/static/js/main.a6b7e67e.js.map",
+    "main.8982d5d1.css.map": "/static/css/main.8982d5d1.css.map",
+    "main.d4b31267.js.map": "/static/js/main.d4b31267.js.map",
     "787.56b3689e.chunk.js.map": "/static/js/787.56b3689e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.135e26bc.css",
-    "static/js/main.a6b7e67e.js"
+    "static/css/main.8982d5d1.css",
+    "static/js/main.d4b31267.js"
   ]
 }

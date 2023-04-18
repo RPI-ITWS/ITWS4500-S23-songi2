@@ -1,0 +1,18 @@
+.team_background{
+    min-height: 100vh;
+    background:
+        linear-gradient(#2EB62C, transparent),
+        linear-gradient(to top left, #57C84D, transparent),
+        linear-gradient(to top right, #C5E8B7, transparent);
+    background-blend-mode: screen;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  thead tr {
+    border-bottom: 3px solid black;
+  }
+  
+  img.mb-5 {
+    width: 50%;
+    height: auto;
+  }

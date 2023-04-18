@@ -4,8 +4,8 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const app = express();
 const fs = require('fs');
-const cors = require("cors");
-app.use(cors());
+// const cors = require("cors");
+// app.use(cors());
 // This is to have the port can connect to data from other port
 app.use(bodyParser.json());
 

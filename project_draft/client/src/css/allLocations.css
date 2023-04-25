@@ -1,0 +1,80 @@
+#all body {
+	margin: 0;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+#all table {
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#all th,
+td {
+	padding: 15px;
+	background-color: transparent;
+	color: inherit;
+}
+
+#all th {
+	text-align: left;
+}
+
+#all thead th {
+	background-color: transparent;
+}
+
+#all tbody tr:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#all tbody td {
+	position: relative;
+}
+
+#all tbody td:hover::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(0,0,0,0.1);
+	z-index: -1;
+}
+
+.datepicker-wrapper {
+	width: 150px; 
+  }
+
+  .allLocations {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  #all .form-group {
+	width: 100%;
+  }
+  
+  #all .col-sm-6 {
+	width: 120%;
+  }
+  
+
+  .my-container {
+	background-color: #ffffff;
+	opacity: 0.95;
+  }
+
+  .input-fields {
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+  
+.pagination {
+	text-align: center;
+}

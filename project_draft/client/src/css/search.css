@@ -1,0 +1,31 @@
+#output {
+    font-size: 16px;
+    padding-top: 3%;
+}
+
+.row {
+    width: 100%;
+}
+
+.label {
+    color: #191c21;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 36px;
+    color: #191c21;
+}
+
+p {
+    color: #191c21;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.end {
+    color: #37353b;
+    font-weight: 600;
+    height: 75px;
+}

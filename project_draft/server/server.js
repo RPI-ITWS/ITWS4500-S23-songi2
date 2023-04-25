@@ -7,9 +7,11 @@ const uri = 'mongodb+srv://loadedskiffer:Miles1010@cluster0.dzoet5k.mongodb.net/
 const client = new MongoClient(uri);
 const cors = require('cors');
 const { json } = require('body-parser');
-app.use(cors({
-    origin: 'http://localhost:3000'
-  }))
+// app.use(cors({
+//     origin: 'http://localhost:3000'
+//   }))
+
+app.use(express.static('../client/build'));
 
 app.use(express.json()); 
 app.use(bodyParser.json());
@@ -23,7 +25,7 @@ AIR_TEMP_AVERAGE = 281.574
 WIND_STRESS_AVERAGE = 0.03995
 
 
-app.use(express.static('./public'))  
+// app.use(express.static('./public'))  
 // app.use(express.static('./build/static'))
 
 //Grab all locations
@@ -149,5 +151,5 @@ app.get("/sort", async (req, res) => {
 })
 
 
-app.listen(3001, '127.0.0.1');
+app.listen(3000, '127.0.0.1');
 // app.listen(port, () => console.log(`Server running on port ${port}`))

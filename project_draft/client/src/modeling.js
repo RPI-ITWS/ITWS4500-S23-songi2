@@ -11,7 +11,7 @@ const Map = () => {
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(`http://localhost:3001/data`);
+    const response = await fetch(`/data`);
     const data = await response.json();
     setData(data);
     const svg = d3.select(svgRef.current);

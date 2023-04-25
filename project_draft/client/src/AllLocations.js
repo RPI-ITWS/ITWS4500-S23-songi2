@@ -9,7 +9,7 @@
     const [currentPage, setCurrentPage] = useState(1);
 
     const fetchData = async (page) => {
-      const response = await fetch(`http://localhost:3001/data/${state}/${category}/${sortOrder}?page=${page}&limit=10`);
+      const response = await fetch(`/data/${state}/${category}/${sortOrder}?page=${page}&limit=10`);
       const data = await response.json();
       setLocations(data);
     };

@@ -22,12 +22,12 @@ const App = () => (
 
 const Main = () => (
   <Routes>
-    <Route exact path='/' element={<Home />}></Route>
-    <Route exact path='/allLocations' element={<AllLocations />}></Route>
-    <Route exact path='/locationSearch' element={<LocationSearch />}></Route>
-    <Route exact path='/about' element={<About />}></Route>
-    <Route exact path='/modeling' element={<Model />}></Route>
-    <Route exact path='/feedback' element={<FeedbackForm />}></Route>
+    <Route exact path='/node/' element={<Home />}></Route>
+    <Route exact path='/node/allLocations' element={<AllLocations />}></Route>
+    <Route exact path='/node/locationSearch' element={<LocationSearch />}></Route>
+    <Route exact path='/node/about' element={<About />}></Route>
+    <Route exact path='/node/modeling' element={<Model />}></Route>
+    <Route exact path='/node/feedback' element={<FeedbackForm />}></Route>
   </Routes>
 );;
 

@@ -11,12 +11,12 @@ const Navigation = () => (
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className=" navbar-nav collapse navbar-collapse" id="navbarNavAltMarkup">
       
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/'>Home</NavLink>
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/allLocations'>All Locations</NavLink>
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/locationSearch'>Location Search</NavLink>
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/modeling'>Modeling</NavLink>
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/about'>About</NavLink>
-        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/feedback'>Contact Us</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/node/'>Home</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/node/allLocations'>All Locations</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/node/locationSearch'>Location Search</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/nodemodeling'>Modeling</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/node/about'>About</NavLink>
+        <NavLink className="nav-item nav-link weight-700" exact activeclassname="current" to='/node/feedback'>Contact Us</NavLink>
 
       </div>
     </div>

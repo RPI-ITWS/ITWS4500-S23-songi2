@@ -2,7 +2,7 @@ import React from 'react';
 import c3 from 'c3';
 
 function Chart ({states}) {
-    var url = "http://localhost:3001/data";
+    var url = "/data";
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
